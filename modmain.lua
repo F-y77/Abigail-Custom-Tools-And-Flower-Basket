@@ -10,6 +10,7 @@ local assets=
 
 AddMinimapAtlas("images/inventoryimages/flower_basket.xml")
 
+if GetModConfigData("basket_open") == 1 then
 local myrecipe = AddRecipe("flower_basket", -- name
 {Ingredient("twigs", 6)}, -- ingredients Add more like so , {Ingredient("boards", 1), Ingredient("rope", 2), Ingredient("twigs", 1), etc}
 GLOBAL.RECIPETABS.FARM, -- tab ( FARM, WAR, DRESS etc)
@@ -21,6 +22,7 @@ nil, -- numtogive
 nil, -- builder_tag
 "images/inventoryimages/flower_basket.xml", -- atlas
 "flower_basket.tex") -- image
+end
 
 GLOBAL.STRINGS.NAMES.FLOWER_BASKET = "花篮子" --It's name in-game
 GLOBAL.STRINGS.RECIPE_DESC.FLOWER_BASKET = "花篮子能够存放四组花瓣。" --recipe description
