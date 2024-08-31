@@ -13,7 +13,7 @@ description = [[
 󰀗 服务器标签：ab_set 
 󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜
 ]]
-version = "1.8" 
+version = "1.81" 
 dst_compatible = true
 forge_compatible = false
 gorge_compatible = false
@@ -49,6 +49,16 @@ configuration_options=
 					--{description = "português-Brasil", data = br},
 				},
 		default = 0
+	},
+	{
+		name = "basket_open",
+		label = "花篮子是否打开",
+		hover = "Flower Basket Is Open?",
+		options ={	
+					{description = "Yes", data = 1},
+					{description = "No", data = 0},
+				},
+		default = 1
 	},
 	{
 		name = "ab_h_x",
