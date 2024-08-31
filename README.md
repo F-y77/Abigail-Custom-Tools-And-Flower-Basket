@@ -4,7 +4,7 @@
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2921798236
 
-[h1] MOD功能 /h1]
+[b] 功能 [/b]
 
  一定要记得自定义啊朋友们！五十多个自定义！快来打造属于你自己属性的阿比盖尔
 
