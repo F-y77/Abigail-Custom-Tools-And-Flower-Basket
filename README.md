@@ -4,7 +4,7 @@
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2921798236
 
-[b] 功能 [/b]
+功能如下
 
  一定要记得自定义啊朋友们！五十多个自定义！快来打造属于你自己属性的阿比盖尔
 
@@ -13,3 +13,5 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2921798236
  CopyWriting:阿比盖尔升级和召唤有一百多个新的短句。
 
 Art:灵药的LOGO和特效放大特效效果，新增一个花篮子可以放四组花瓣，阿比盖尔专属。
+
+这是完整的源代码库存
