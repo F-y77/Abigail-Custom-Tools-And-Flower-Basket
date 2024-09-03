@@ -1,7 +1,7 @@
 name = "󰀉 阿比盖尔自定义工具 󰀉 "
 author = "lofling0"
 description = [[
-󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜
+󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜
 󰀉 一定要记得自定义啊朋友们！五十多个自定义！快来打造属于你自己属性的阿比盖尔
 
 󰀉 Program:没有自定义下，阿比盖尔现在可以升到100级，从3级600血开始，每升一级都会多100血󰀍；到9000血以上，每升一级加200滴血󰀍，直到10500血󰀍为止；快捷键一键召唤和收回阿比盖尔（感谢Electroely）；灵魂万能药更加强悍；护盾立场是应该是控制保护罩大小的，以及更多。
@@ -11,9 +11,9 @@ description = [[
 󰀉 Art:灵药的LOGO和特效放大特效效果，新增一个花篮子可以放四组花瓣。
 
 󰀗 服务器标签：ab_set 
-󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜
+󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜󰀜
 ]]
-version = "1.81" 
+version = "1.84" 
 dst_compatible = true
 forge_compatible = false
 gorge_compatible = false
@@ -60,6 +60,7 @@ configuration_options=
 				},
 		default = 1
 	},
+
 	{
 		name = "ab_h_x",
 		label = "Health multiple\血量倍数",
@@ -219,8 +220,8 @@ configuration_options=
 	},
 	{
 		name = "damage_period",
-		label = "Damage interval\伤害间隔",
-		hover = "Attack speed(sec)\n设置阿比盖尔每隔几秒钟打一下，原版是1.5。",
+		label = "无意义的数据？",
+		hover = "并不是攻击间隔，但原版是damage_period=1.5",
 		options ={	
 	
 					{description = "0.25", data = 0.25},
@@ -235,7 +236,7 @@ configuration_options=
 					{description = "7.5", data = 7.5},
 					{description = "10", data = 10},
 				},
-		default = 2
+		default = 1.5
 	},
 	{
         name = "ab_d_part",
@@ -797,12 +798,21 @@ configuration_options=
 		default = 3
 	},
 	{
-		name = "AURA_TICKPERIOD",--o3
-		label = "AURA_TICKPERIOD",
-		hover = " 范围恢复时段，原版是3\n Orginal is 3",
+		name = "AURA_TICKPERIOD",--o1
+		label = "DMG_PERIOD/攻击间隔",
+		hover = " 数值越低攻击越快，原版是1\n Orginal is 1",
 		options ={	
 		
 					{description = "0", data = 0},
+					{description = "0.05", data = 0.05},
+					{description = "0.1", data = 0.1},
+					{description = "0.2", data = 0.2},
+					{description = "0.25", data = 0.25},
+					{description = "0.3", data = 0.3},
+					{description = "0.4", data = 0.4},
+					{description = "0.5", data = 0.5},
+					{description = "0.1", data = 0.1},
+					{description = "0.15", data = 0.15},
 					{description = "0.25", data = 0.25},
 					{description = "0.5", data = 0.5},
 					{description = "0.65", data = 0.65},
@@ -820,7 +830,7 @@ configuration_options=
 					{description = "10.0", data = 10},
 
 				},
-		default = 3
+		default = 0.5
 	},
 	{
 		name = "ABIGAI_HEALTH_REGEN_TIME",--o3
@@ -860,8 +870,8 @@ local function filltable(tbl) --感谢作者Electroely在Abigail Keybind的代�
 		tbl[i] = {description = keys[i], data = keys[i]}
 	end
 end
-filltable(configuration_options[24].options)
 filltable(configuration_options[25].options)
+filltable(configuration_options[26].options)
 
 
 
